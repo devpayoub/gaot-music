@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Your Email - GOAT Albums</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: #1A1A1A;
+            padding: 20px;
+        }
+        
+        .email-container {
+            margin: 0 auto;
+            background: #1A1A1A;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid #333;
+        }
+        
+        .header {
+            padding: 40px 30px 20px;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+        
+        .checkmark {
+            width: 64px;
+            height: 64px;
+            background: rgba(34, 197, 94, 0.1);
+            border: 2px solid #22c55e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        
+        .checkmark-icon {
+            width: 32px;
+            height: 32px;
+            color: #22c55e;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+        
+        .content {
+            padding: 0 32px 32px;
+            text-align: center;
+        }
+        
+        .email-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 2px solid #3b82f6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        
+        .email-icon svg {
+            width: 24px;
+            height: 24px;
+            color: #3b82f6;
+        }
+        
+        .message {
+            margin-bottom: 24px;
+        }
+        
+        .message h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        
+        .email-address {
+            font-weight: 500;
+            color: #fbbf24;
+            margin-bottom: 16px;
+        }
+        
+        .instructions {
+            font-size: 14px;
+            color: #9ca3af;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        
+        .instructions p {
+            margin-bottom: 8px;
+        }
+        
+        .resend-section {
+            margin-bottom: 24px;
+        }
+        
+        .resend-text {
+            font-size: 14px;
+            color: #9ca3af;
+            margin-bottom: 12px;
+        }
+        
+        .resend-button {
+            display: inline-block;
+            background: #1A1A1A;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            border: 1px solid #374151;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .resend-button:hover {
+            background: #374151;
+        }
+        
+        .confirm-button {
+            display: inline-block;
+            background: #ffffff;
+            color: #1A1A1A;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 24px 0;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .confirm-button:hover {
+            background: #f3f4f6;
+        }
+        
+        .footer {
+            padding: 0 32px 32px;
+            text-align: center;
+        }
+        
+        .back-link {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: color 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: #ffffff;
+        }
+        
+        .arrow-left {
+            width: 16px;
+            height: 16px;
+        }
+        
+        @media (max-width: 600px) {
+            .email-container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            .header, .content, .footer {
+                padding: 20px 24px;
+            }
+            
+            .title {
+                font-size: 20px;
+            }
+            
+            .confirm-button {
+                padding: 14px 24px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="https://i.ibb.co/cXKXLksC/logo2.png" alt="GOAT Albums Logo" />
+            </div>
+        </div>
+        
+        <div class="content">
+            <!-- Email Icon -->
+            <div class="email-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+            </div>
+            
+            <!-- Primary Message -->
+            <div class="message">
+                <h3>Welcome to GOAT Albums ! 🎵</h3>
+                <p class="description">
+                    Thank you for joining the greatest music platform! To complete your registration and start discovering amazing music, please confirm your email address by clicking the button below.
+                </p>
+                <a href="{{ .ConfirmationURL }}" class="confirm-button">
+                    ✨ Confirm Your Email ✨
+                </a>            </div>
+            
+            <!-- Instructions -->
+            <div class="instructions">
+                <p>🔒 Security Note.</p>
+                <p>This link will expire in 5 minutes for your security. If you didn't create this account, you can safely ignore this email.</p>
+            </div>
+            
+            
+        </div>
+        <div class="footer">
+            <p class="footer-text">
+                If the button doesn't work, copy and paste this link into your browser:
+            </p>
+            <p style="word-break: break-all; color: #667eea; font-size: 12px; margin: 10px 0;">
+                {{ .ConfirmationURL }}
+            </p>
+            
+            <div class="social-links">
+                <a href="#" class="social-link">Website</a>
+                <a href="#" class="social-link">Support</a>
+                <a href="#" class="social-link">Privacy Policy</a>
+            </div>
+            
+            <p class="footer-text" style="margin-top: 20px; font-size: 12px; color: #999;">
+                © 2024 GOAT Albums. All rights reserved.
+            </p>
+        </div>
+        
+    </div>
+</body>
+</html> 
